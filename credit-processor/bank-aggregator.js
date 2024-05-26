@@ -13,6 +13,7 @@ let monthToExpenseMap = {};
 let monthToCreditMap = {};
 let creditCardExpenses = [];
 let monthToCreditCardMap = {};
+let weightedDiscretionaryExpenses = {};
 
 function handleEmptyEntry(map, key, value) {
   if (!map[key]) map[key] = value;
@@ -43,6 +44,9 @@ function bucketize() {
           typeof transaction.credit == "string" &&
           transaction.credit.replace(/,/g, "");
 
+        let weight = parseFloat(transaction.weight);
+        let isDiscretionary = transaction.isDiscretionary == "true";
+
         transaction.debit = parseInt(transaction.debit || 0);
         transaction.credit = parseInt(transaction.credit || 0);
 
@@ -57,6 +61,14 @@ function bucketize() {
               transaction.debit
             );
             handleEmptyEntry(monthToExpenseMap, month, transaction.debit);
+
+            if (isDiscretionary) {
+              handleEmptyEntry(
+                weightedDiscretionaryExpenses,
+                month,
+                transaction.debit * weight
+              );
+            }
           }
         } else {
           handleEmptyEntry(monthToCreditMap, month, transaction.credit);
@@ -75,8 +87,9 @@ function bucketize() {
   fs.writeFileSync(outputPath, JSON.stringify(result));
 }
 
-function dtiAndDssRatios(avgIncome, avgExpense, avgCreditExpense) {
-  let dss = avgExpense / avgIncome;
+function dtiAndDssRatios(avgIncome, avgExpense, avgCreditExpense, avgDss) {
+  // let dss = avgExpense / avgIncome;
+  dss = avgDss;
   let dti = avgCreditExpense / avgIncome;
 
   dti = Math.max(0, 100 - 2.5 * dti);
@@ -91,7 +104,7 @@ function dtiAndDssRatios(avgIncome, avgExpense, avgCreditExpense) {
 
   console.log(loanAmount, creditScore);
 
-  return loanAmount;
+  return { loanAmount, avgDss };
 }
 
 function normal(avgIncome, avgExpense, avgCreditExpense) {
@@ -105,10 +118,14 @@ function getLoanAmount() {
   let avgIncome = 0;
   let avgExpense = 0;
   let avgCreditExpense = 0;
+  let avgDss = 0;
 
   let monthToCreditMapArr = Object.keys(monthToCreditMap);
   let monthToExpenseMapArr = Object.keys(monthToExpenseMap);
   let monthToCreditCardMapArr = Object.keys(monthToCreditCardMap);
+  let weightedDiscretionaryExpensesArr = Object.keys(
+    weightedDiscretionaryExpenses
+  );
 
   for (key of monthToCreditMapArr) {
     avgIncome += monthToCreditMap[key];
@@ -125,7 +142,11 @@ function getLoanAmount() {
   }
   avgCreditExpense = avgCreditExpense / monthToCreditCardMapArr.length;
 
-  return dtiAndDssRatios(avgIncome, avgExpense, avgCreditExpense);
+  for (key of weightedDiscretionaryExpensesArr) {
+    avgDss += weightedDiscretionaryExpenses[key];
+  }
+
+  return dtiAndDssRatios(avgIncome, avgExpense, avgCreditExpense, avgDss);
   // return normal(avgIncome, avgExpense, avgCreditExpense);
 
   // let loanAmount = (avgIncome - (avgExpense + avgCreditExpense)) * 10;
