@@ -1,0 +1,1108 @@
+{
+  "Apr.pdf": {
+    "pdf": "Apr.pdf",
+    "account": {
+      "account_holder": {
+        "name": "MRTEJAS SANJIV AGRAWAL",
+        "joint_holder": null,
+        "father_name": "SANJIV TRYAMBAKDAS AGRAWAL",
+        "address": {
+          "street": "NEAR STATE BANK MAIN ROAD",
+          "village": "JALGAON JAMOD BULDHANA",
+          "city": "JALGAON",
+          "state": "MAHARASHTRA",
+          "country": "INDIA",
+          "postal_code": "443402"
+        }
+      },
+      "account_details": {
+        "customer_id": "156115080",
+        "account_number": "50100384216375",
+        "ifsc_code": "HDFC0002817",
+        "micr_code": "444240402",
+        "scheme": "PRIME",
+        "nominee": {
+          "registered": "Registered",
+          "name": null
+        },
+        "pan": null,
+        "ckyc_number": null
+      },
+      "contact_details": {
+        "mobile_number": "18002026161",
+        "email": "AGRAWALTEJAS01@GMAIL.COM"
+      },
+      "statement_period": {
+        "from": "01-04-2024",
+        "to": "30-04-2024"
+      }
+    },
+    "statements": [
+      {
+        "transactions": [
+          {
+            "date": "01-04-2024",
+            "cheque_number": null,
+            "particulars": "UPI-XXXXXX2239-SBIN0000001-409253143079-0000409253143079\nPAYMENT FROM PHONE",
+            "payment_method": "UPI",
+            "debit": "35,713.00",
+            "credit": null,
+            "balance": "90,005.05",
+            "category": "Miscellaneous",
+            "subcategory": "null",
+            "recipientName": "null"
+          },
+          {
+            "date": "01-04-2024",
+            "cheque_number": null,
+            "particulars": "UPI-BUNDL TECHNOLOGIES P-SWIGGYGENIE@AXB0000409241023657\n-UTIB0000100-409241023657-REMARKS",
+            "payment_method": "UPI",
+            "debit": "160.00",
+            "credit": null,
+            "balance": "89,845.05",
+            "category": "Food and Groceries",
+            "subcategory": "Food delivery",
+            "recipientName": "SWIGGY"
+          },
+          {
+            "date": "01-04-2024",
+            "cheque_number": null,
+            "particulars": "UPI-SWIGGY-SWIGGYSTORES@ICICI-ICIC0DC0090000409232645018\n9-409232645018-PAYMENT FOR SWIGGY",
+            "payment_method": "UPI",
+            "debit": "260.00",
+            "credit": null,
+            "balance": "89,585.05",
+            "category": "Food and Groceries",
+            "subcategory": "Food delivery",
+            "recipientName": "SWIGGY"
+          },
+          {
+            "date": "01-04-2024",
+            "cheque_number": null,
+            "particulars": "UPI-ZERODHA BROKING\nLTD-ZERODHABROKING@H\nDFCBANK-HDFC0000523-409238383568-0086081\n420417625 Z",
+            "payment_method": "UPI",
+            "debit": "50,000.00",
+            "credit": null,
+            "balance": "39,585.05",
+            "category": "Savings and Investments",
+            "subcategory": "Investment contributions",
+            "recipientName": "ZERODHA BROKING LTD"
+          },
+          {
+            "date": "01-04-2024",
+            "cheque_number": null,
+            "particulars": "UPI-ZERODHA BROKING LIMI-ZERODHA.BROKING0000409232718337\n@ICICI-ICIC0DC0099-409232718337-72713784\n12028548 Z",
+            "payment_method": "UPI",
+            "debit": "25,000.00",
+            "credit": null,
+            "balance": "14,585.05",
+            "category": "Savings and Investments",
+            "subcategory": "Investment contributions",
+            "recipientName": "ZERODHA BROKING LIMI"
+          },
+          {
+            "date": "01-04-2024",
+            "cheque_number": null,
+            "particulars": "UPI-ANU ENTERPRISES-ANUENTERPRISES.396830000409292506574\n732@HDFCBANK-HDFC0000001-409292506574-PA\nYMENT FROM PHONE",
+            "payment_method": "UPI",
+            "debit": "840.00",
+            "credit": null,
+            "balance": "13,745.05",
+            "category": "Miscellaneous",
+            "subcategory": "null",
+            "recipientName": "ANU ENTERPRISES"
+          },
+          {
+            "date": "01-04-2024",
+            "cheque_number": null,
+            "particulars": "ACH D- INDIAN CLEARING CORP-JKO8TL8ID7M20000002375870191",
+            "payment_method": "Autopayment",
+            "debit": "3,000.00",
+            "credit": null,
+            "balance": "10,745.05",
+            "category": "Debt Repayment",
+            "subcategory": "Loan payments",
+            "recipientName": "INDIAN CLEARING CORP"
+          },
+          {
+            "date": "02-04-2024",
+            "cheque_number": null,
+            "particulars": "UPI-REVATHI  J-9880563013@YBL-SBIN0001730000445909587458\n1-445909587458-PAYMENT FROM PHONE",
+            "payment_method": "UPI",
+            "debit": "1,000.00",
+            "credit": null,
+            "balance": "9,745.05",
+            "category": "Miscellaneous",
+            "subcategory": "null",
+            "recipientName": "REVATHI  J"
+          },
+          {
+            "date": "03-04-2024",
+            "cheque_number": null,
+            "particulars": "UPI-PHONEPE-EURONET@YBL-YESB0YBLUPI-44600000446008776534\n08776534-PAYMENT FROM PHONE",
+            "payment_method": "UPI",
+            "debit": "722.00",
+            "credit": null,
+            "balance": "9,023.05",
+            "category": "Miscellaneous",
+            "subcategory": "null",
+            "recipientName": "PHONEPE"
+          },
+          {
+            "date": "03-04-2024",
+            "cheque_number": null,
+            "particulars": "UPI-APURV DAVE-APURVDAVE@YBL-HDFC00094000000446014223210\n-446014223210-PAYMENT FROM PHONE",
+            "payment_method": "UPI",
+            "debit": "910.00",
+            "credit": null,
+            "balance": "8,113.05",
+            "category": "Miscellaneous",
+            "subcategory": "null",
+            "recipientName": "APURV DAVE"
+          },
+          {
+            "date": "04-04-2024",
+            "cheque_number": null,
+            "particulars": "UPI-CULVER MAX ENTERTAIN-PAYTM-8742454@P0000409537337237\nAYTM-YESB0PTMUPI-409537337237-OIDSONYLIV\nBKDXM171",
+            "payment_method": "UPI",
+            "debit": "699.00",
+            "credit": null,
+            "balance": "7,414.05",
+            "category": "Entertainment and Leisure",
+            "subcategory": "Subscriptions",
+            "recipientName": "CULVER MAX ENTERTAIN"
+          },
+          {
+            "date": "04-04-2024",
+            "cheque_number": null,
+            "particulars": "UPI-SWIGGY-SWIGGY.STORES@AXISBANK-UTIB000000409528931430\n00100-409528931430-SWIGGY ORDER ID 17",
+            "payment_method": "UPI",
+            "debit": "116.00",
+            "credit": null,
+            "balance": "7,298.05",
+            "category": "Food and Groceries",
+            "subcategory": "Food delivery",
+            "recipientName": "SWIGGY"
+          },
+          {
+            "date": "05-04-2024",
+            "cheque_number": null,
+            "particulars": "UPI-RAM PRASAD KHATIWADA-9611420805@YBL-0000446243909665\nSBIN0070740-446243909665-FEB FEES",
+            "payment_method": "UPI",
+            "debit": "1,500.00",
+            "credit": null,
+            "balance": "5,798.05",
+            "category": "Miscellaneous",
+            "subcategory": "null",
+            "recipientName": "RAM PRASAD KHATIWADA"
+          },
+          {
+            "date": "05-04-2024",
+            "cheque_number": null,
+            "particulars": "UPI-ANU ENTERPRISES-ANUENTERPRISES.396830000409696047463\n732@HDFCBANK-HDFC0000001-409696047463-PA\nYMENT FROM PHONE",
+            "payment_method": "UPI",
+            "debit": "1,380.00",
+            "credit": null,
+            "balance": "4,418.05",
+            "category": "Miscellaneous",
+            "subcategory": "null",
+            "recipientName": "ANU ENTERPRISES"
+          },
+          {
+            "date": "05-04-2024",
+            "cheque_number": null,
+            "particulars": "UPI-SHUBHAM KHETAN-9460905445@YBL-SBIN000000446269319064\n01617-446269319064-SPLITWISE SETTLE",
+            "payment_method": "UPI",
+            "debit": "16,910.00",
+            "credit": null,
+            "balance": "2,138.05",
+            "category": "Miscellaneous",
+            "subcategory": "null",
+            "recipientName": "SHUBHAM KHETAN"
+          },
+          {
+            "date": "05-04-2024",
+            "cheque_number": null,
+            "particulars": "UPI-NA-NA-HDFC0002817-446277121402-PAYME0000446277121402\nNT FROM PHONE",
+            "payment_method": "UPI",
+            "debit": "1,975.00",
+            "credit": null,
+            "balance": "19,353.05",
+            "category": "Miscellaneous",
+            "subcategory": "null",
+            "recipientName": "null"
+          },
+          {
+            "date": "06-04-2024",
+            "cheque_number": null,
+            "particulars": "NEFT CR-YESB0000001-ZERODHA BROKING LTD-0YESB40974167213\nDSCNB A/C-TEJAS SANJIV AGRAWAL-YESB40974\n167213",
+            "payment_method": "NEFT",
+            "debit": null,
+            "credit": "2,553.82",
+            "balance": "21,906.87",
+            "category": "Savings and Investments",
+            "subcategory": "Investment contributions",
+            "recipientName": "ZERODHA BROKING LTD"
+          },
+          {
+            "date": "07-04-2024",
+            "cheque_number": null,
+            "particulars": "UPI-SWIGGY-SWIGGY.STORES@AXISBANK-UTIB000000409842624081\n00100-409842624081-SWIGGY ORDER ID 17",
+            "payment_method": "UPI",
+            "debit": "166.00",
+            "credit": null,
+            "balance": "21,740.87",
+            "category": "Food and Groceries",
+            "subcategory": "Food delivery",
+            "recipientName": "SWIGGY"
+          },
+          {
+            "date": "08-04-2024",
+            "cheque_number": null,
+            "particulars": "UPI-RAJESH KUMAR NAYAK-8318836649@YBL-UT0000446531111429\nIB0002133-446531111429-PAYMENT FROM PHON\nE",
+            "payment_method": "UPI",
+            "debit": "1,200.00",
+            "credit": null,
+            "balance": "20,540.87",
+            "category": "Miscellaneous",
+            "subcategory": "null",
+            "recipientName": "RAJESH KUMAR NAYAK"
+          },
+          {
+            "date": "10-04-2024",
+            "cheque_number": null,
+            "particulars": "ME DC SI 526099XXXXXX4725 YOUTUBE0000000000157717",
+            "payment_method": "Other",
+            "debit": "189.00",
+            "credit": null,
+            "balance": "20,351.87",
+            "category": "Entertainment and Leisure",
+            "subcategory": "Subscriptions",
+            "recipientName": "YOUTUBE"
+          },
+          {
+            "date": "10-04-2024",
+            "cheque_number": null,
+            "particulars": "UPI-MOHSIN SARIEF-8050801667A@AXL-FDRL000000410183767434\n01387-410183767434-PAYMENT FROM PHONE",
+            "payment_method": "UPI",
+            "debit": "100.00",
+            "credit": null,
+            "balance": "20,251.87",
+            "category": "Miscellaneous",
+            "subcategory": "null",
+            "recipientName": "MOHSIN SARIEF"
+          },
+          {
+            "date": "10-04-2024",
+            "cheque_number": null,
+            "particulars": "UPI-ANU ENTERPRISES-ANUENTERPRISES.396830000410103595977\n732@HDFCBANK-HDFC0000001-410103595977-PA\nYMENT FROM PHONE",
+            "payment_method": "UPI",
+            "debit": "840.00",
+            "credit": null,
+            "balance": "19,411.87",
+            "category": "Miscellaneous",
+            "subcategory": "null",
+            "recipientName": "ANU ENTERPRISES"
+          },
+          {
+            "date": "11-04-2024",
+            "cheque_number": null,
+            "particulars": "UPI-G MART-PAYTMQRAORFPJP408@PAYTM-YESB00000410278454257\nPTMUPI-410278454257-PAYMENT FROM PHONE",
+            "payment_method": "UPI",
+            "debit": "34.00",
+            "credit": null,
+            "balance": "19,377.87",
+            "category": "Shopping",
+            "subcategory": "Groceries",
+            "recipientName": "G MART"
+          },
+          {
+            "date": "11-04-2024",
+            "cheque_number": null,
+            "particulars": "UPI-NA-NA-HDFC0002817-446800574881-PAYME0000446800574881\nNT FROM PHONE",
+            "payment_method": "UPI",
+            "debit": "1,980.00",
+            "credit": null,
+            "balance": "17,397.87",
+            "category": "Miscellaneous",
+            "subcategory": "null",
+            "recipientName": "null"
+          },
+          {
+            "date": "13-04-2024",
+            "cheque_number": null,
+            "particulars": "UPI-GROFERS INDIA PRIVAT-GROFERSINDIAPRI0000410479438129\nVATE.RZP@AXISBANK-UTIB0000100-4104794381\n29-PAY VIA RAZORPAY",
+            "payment_method": "UPI",
+            "debit": "194.00",
+            "credit": null,
+            "balance": "17,203.87",
+            "category": "Shopping",
+            "subcategory": "Groceries",
+            "recipientName": "GROFERS INDIA PRIVAT"
+          },
+          {
+            "date": "13-04-2024",
+            "cheque_number": null,
+            "particulars": "UPI-BOTTLE STORE MARKETI-Q266910103@YBL-0000447095508589\nYESB0YBLUPI-447095508589-PAYMENT FROM PH\nONE",
+            "payment_method": "UPI",
+            "debit": "640.00",
+            "credit": null,
+            "balance": "16,563.87",
+            "category": "Shopping",
+            "subcategory": "Groceries",
+            "recipientName": "BOTTLE STORE MARKETI"
+          }
+        ]
+      },
+      {
+        "transactions": [
+          {
+            "date": "15-04-2024",
+            "cheque_number": null,
+            "particulars": "UPI-GOOGLE-PLAYSTORE@AXISBANK-UTIB000055000041069256838315/04/24699.0015,864.87\n3-410692568383-MANDATEEXECUTE",
+            "payment_method": "UPI",
+            "debit": "699.00",
+            "credit": null,
+            "balance": "15,864.87",
+            "category": "Shopping",
+            "subcategory": "Electronics",
+            "recipientName": "Google Playstore"
+          },
+          {
+            "date": "15-04-2024",
+            "cheque_number": null,
+            "particulars": "ACH D- SIP-I4EWV8ATFSJW000000297205691615/04/241,000.0014,864.87",
+            "payment_method": "ACH",
+            "debit": "1,000.00",
+            "credit": null,
+            "balance": "14,864.87",
+            "category": "Savings and Investments",
+            "subcategory": "Investment contributions",
+            "recipientName": null
+          },
+          {
+            "date": "16-04-2024",
+            "cheque_number": null,
+            "particulars": "ACH D- INDIAN CLEARING CORP-1DPGJWP8BA8N000000297187327316/04/243,000.0011,864.87",
+            "payment_method": "ACH",
+            "debit": "3,000.00",
+            "credit": null,
+            "balance": "11,864.87",
+            "category": "Debt Repayment",
+            "subcategory": "Loan payments",
+            "recipientName": "INDIAN CLEARING CORP"
+          },
+          {
+            "date": "16-04-2024",
+            "cheque_number": null,
+            "particulars": "UPI-RESET GYMS BANGALORE-PAYTMQR28100505000041073958681816/04/24806.0011,058.87\n0101ZE4SUBN4WMYT@PAYTM-YESB0PTMUPI-41073\n9586818-PAYMENT FROM PHONE",
+            "payment_method": "UPI",
+            "debit": "806.00",
+            "credit": null,
+            "balance": "11,058.87",
+            "category": "Entertainment and Leisure",
+            "subcategory": "Hobbies and sports",
+            "recipientName": "RESET GYMS BANGALORE"
+          },
+          {
+            "date": "16-04-2024",
+            "cheque_number": null,
+            "particulars": "UPI-GROWTHX EDUCATION LA-GROWTHX57.RZP@I000041077259794216/04/24199.0010,859.87\nCICI-ICIC0DC0099-410772597942-PAYVIARAZO\nRPAY",
+            "payment_method": "UPI",
+            "debit": "199.00",
+            "credit": null,
+            "balance": "10,859.87",
+            "category": "Education",
+            "subcategory": "Courses and workshops",
+            "recipientName": "GROWTHX EDUCATION LA"
+          },
+          {
+            "date": "17-04-2024",
+            "cheque_number": null,
+            "particulars": "UPI-DIVERSE RETAILS PVT -DIVERSERETAILSP000041083105793017/04/24527.0010,332.87\nVTLTD.CF@HDFCBANK-HDFC0004460-4108310579\n30-PAYMENT FROM PHONE",
+            "payment_method": "UPI",
+            "debit": "527.00",
+            "credit": null,
+            "balance": "10,332.87",
+            "category": "Shopping",
+            "subcategory": "Miscellaneous",
+            "recipientName": "DIVERSE RETAILS PVT LTD"
+          },
+          {
+            "date": "17-04-2024",
+            "cheque_number": null,
+            "particulars": "UPI-GOOGLE INDIA DIGITAL-PLAYSTORE@AXISB000041087599518517/04/24800.009,532.87\nANK-UTIB0000553-410875995185-PAYMENT FRO\nM PHONE",
+            "payment_method": "UPI",
+            "debit": "800.00",
+            "credit": null,
+            "balance": "9,532.87",
+            "category": "Shopping",
+            "subcategory": "Electronics",
+            "recipientName": "GOOGLE INDIA DIGITAL"
+          },
+          {
+            "date": "17-04-2024",
+            "cheque_number": null,
+            "particulars": "UPI-AKASH  H-Q521320261@YBL-YESB0YBLUPI-000044748138453717/04/2440.009,492.87\n447481384537-PAYMENT FROM PHONE",
+            "payment_method": "UPI",
+            "debit": "40.00",
+            "credit": null,
+            "balance": "9,492.87",
+            "category": "Miscellaneous",
+            "subcategory": "Gifts and donations",
+            "recipientName": "AKASH  H"
+          },
+          {
+            "date": "17-04-2024",
+            "cheque_number": null,
+            "particulars": "UPI-NA-NA-HDFC0002817-447432649293-PAYME000044743264929317/04/241,965.997,526.88\nNT FROM PHONE",
+            "payment_method": "UPI",
+            "debit": "1,965.99",
+            "credit": null,
+            "balance": "7,526.88",
+            "category": "Miscellaneous",
+            "subcategory": "Other income sources",
+            "recipientName": null
+          },
+          {
+            "date": "18-04-2024",
+            "cheque_number": null,
+            "particulars": "UPI-BUNDL TECHNOLOGIES P-SWIGGYINSTAMART000041092103485518/04/24167.007,359.88\n.RZP@AXISBANK-UTIB0000100-410921034855-P\nAY VIA RAZORPAY",
+            "payment_method": "UPI",
+            "debit": "167.00",
+            "credit": null,
+            "balance": "7,359.88",
+            "category": "Food and Groceries",
+            "subcategory": "Food delivery",
+            "recipientName": "BUNDL TECHNOLOGIES P"
+          },
+          {
+            "date": "18-04-2024",
+            "cheque_number": null,
+            "particulars": "ACH C- BHARAT DYNAMICS LTD-85826000000309320035218/04/2461.957,421.83",
+            "payment_method": "ACH",
+            "debit": "61.95",
+            "credit": null,
+            "balance": "7,421.83",
+            "category": "Miscellaneous",
+            "subcategory": "Other income sources",
+            "recipientName": "BHARAT DYNAMICS LTD"
+          },
+          {
+            "date": "19-04-2024",
+            "cheque_number": null,
+            "particulars": "UPI-DECATHLON EVENT-PAYTM-351894@PAYTM-Y000041107239041919/04/24348.007,073.83\nESB0PTMUPI-411072390419-PAID VIA CRED",
+            "payment_method": "UPI",
+            "debit": "348.00",
+            "credit": null,
+            "balance": "7,073.83",
+            "category": "Entertainment and Leisure",
+            "subcategory": "Event tickets",
+            "recipientName": "DECATHLON EVENT"
+          },
+          {
+            "date": "20-04-2024",
+            "cheque_number": null,
+            "particulars": "UPI-UBER INDIA SYSTEMS P-UBERRIDES@HDFCB000041119637468420/04/241.007,074.83\nANK-HDFC0000240-411196374684-CHARGE ADJU\nSTMENT",
+            "payment_method": "UPI",
+            "debit": "1.00",
+            "credit": null,
+            "balance": "7,074.83",
+            "category": "Transportation",
+            "subcategory": "Public transport",
+            "recipientName": "UBER INDIA SYSTEMS P"
+          },
+          {
+            "date": "21-04-2024",
+            "cheque_number": null,
+            "particulars": "UPI-DONNE BIRYANI HOUSE-PAYTMQRLQ2XGJS21000041124175000921/04/24122.006,952.83\n8@PAYTM-YESB0PTMUPI-411241750009-PAYMENT\nFROM PHONE",
+            "payment_method": "UPI",
+            "debit": "122.00",
+            "credit": null,
+            "balance": "6,952.83",
+            "category": "Food and Groceries",
+            "subcategory": "Dining out",
+            "recipientName": "DONNE BIRYANI HOUSE"
+          },
+          {
+            "date": "21-04-2024",
+            "cheque_number": null,
+            "particulars": "UPI-SHEELA  DEVI-Q426949014@YBL-YESB0YBL000044783335169021/04/2440.006,912.83\nUPI-447833351690-PAYMENT FROM PHONE",
+            "payment_method": "UPI",
+            "debit": "40.00",
+            "credit": null,
+            "balance": "6,912.83",
+            "category": "Miscellaneous",
+            "subcategory": "Gifts and donations",
+            "recipientName": "SHEELA  DEVI"
+          },
+          {
+            "date": "21-04-2024",
+            "cheque_number": null,
+            "particulars": "UPI-NA-NA-HDFC0002817-447893255474-PAYME000044789325547421/04/241,965.994,946.84\nNT FROM PHONE",
+            "payment_method": "UPI",
+            "debit": "1,965.99",
+            "credit": null,
+            "balance": "4,946.84",
+            "category": "Miscellaneous",
+            "subcategory": "Other income sources",
+            "recipientName": null
+          },
+          {
+            "date": "21-04-2024",
+            "cheque_number": null,
+            "particulars": "UPI-SWIGGY-SWIGGYSTORES@ICICI-ICIC0DC009000041121297912421/04/24314.004,632.84\n9-411212979124-PAYMENT FOR SWIGGY",
+            "payment_method": "UPI",
+            "debit": "314.00",
+            "credit": null,
+            "balance": "4,632.84",
+            "category": "Food and Groceries",
+            "subcategory": "Food delivery",
+            "recipientName": "SWIGGY"
+          },
+          {
+            "date": "25-04-2024",
+            "cheque_number": null,
+            "particulars": "UPIRET-20240416-41077259794200000000000000025/04/24199.004,831.84",
+            "payment_method": "UPI",
+            "debit": "199.00",
+            "credit": null,
+            "balance": "4,831.84",
+            "category": "Education",
+            "subcategory": "Courses and workshops",
+            "recipientName": null
+          },
+          {
+            "date": "26-04-2024",
+            "cheque_number": null,
+            "particulars": "UPI-HANUMANTI-PAYTMQR13MNY451VO@PAYTM-YE000041172119537026/04/24120.004,711.84\nSB0PTMUPI-411721195370-PAYMENT FROM PHON\nE",
+            "payment_method": "UPI",
+            "debit": "120.00",
+            "credit": null,
+            "balance": "4,711.84",
+            "category": "Miscellaneous",
+            "subcategory": "Gifts and donations",
+            "recipientName": "HANUMANTI"
+          },
+          {
+            "date": "26-04-2024",
+            "cheque_number": null,
+            "particulars": "UPI-S R A TRANSPORTS-Q459396022@YBL-YESB000044830071049926/04/2440.004,671.84\n0YBLUPI-448300710499-PAYMENT FROM PHONE",
+            "payment_method": "UPI",
+            "debit": "40.00",
+            "credit": null,
+            "balance": "4,671.84",
+            "category": "Transportation",
+            "subcategory": "Vehicle maintenance",
+            "recipientName": "S R A TRANSPORTS"
+          },
+          {
+            "date": "26-04-2024",
+            "cheque_number": null,
+            "particulars": "UPI-NA-NA-HDFC0002817-448356319347-PAYME000044835631934726/04/241,995.002,676.84\nNT FROM PHONE",
+            "payment_method": "UPI",
+            "debit": "1,995.00",
+            "credit": null,
+            "balance": "2,676.84",
+            "category": "Miscellaneous",
+            "subcategory": "Other income sources",
+            "recipientName": null
+          },
+          {
+            "date": "30-04-2024",
+            "cheque_number": null,
+            "particulars": "ACH D- SIP-7TBNEY3DBHFN000000339515272830/04/241,000.001,676.84",
+            "payment_method": "ACH",
+            "debit": "1,000.00",
+            "credit": null,
+            "balance": "1,676.84",
+            "category": "Savings and Investments",
+            "subcategory": "Investment contributions",
+            "recipientName": null
+          },
+          {
+            "date": "30-04-2024",
+            "cheque_number": null,
+            "particulars": "50200066327428-TPT-SALARY APRIL 2024-CRE000000041988290630/04/24179,270.00180,946.84\nDITAIL TECHNOLOGIES PRIVATE LIMITED",
+            "payment_method": "Other",
+            "debit": null,
+            "credit": "179,270.00",
+            "balance": "180,946.84",
+            "category": "Income",
+            "subcategory": "Salary",
+            "recipientName": "DITAIL TECHNOLOGIES PRIVATE LIMITED"
+          },
+          {
+            "date": "30-04-2024",
+            "cheque_number": null,
+            "particulars": "UPI-AXIS-CRED.CLUB@AXISB-UTIB0000114-412000041216185306930/04/2486,459.0094,487.84\n161853069-PAYMENT ON CRED",
+            "payment_method": "UPI",
+            "debit": "86,459.00",
+            "credit": null,
+            "balance": "94,487.84",
+            "category": "Debt Repayment",
+            "subcategory": "Credit card payments",
+            "recipientName": "CRED.CLUB"
+          }
+        ]
+      }
+    ]
+  },
+  "Feb.pdf": {
+    "pdf": "Feb.pdf",
+    "account": {
+      "account_holder": {
+        "name": "MR TEJAS SANJIV AGRAWAL",
+        "joint_holder": null,
+        "father_name": "SANJIV TRYAMBAKDAS AGRAWAL",
+        "address": {
+          "street": "NEAR STATE BANK MAIN ROAD",
+          "village": "JALGAON  JAMOD  BULDHANA",
+          "city": "JALGAON",
+          "state": "MAHARASHTRA",
+          "country": "INDIA",
+          "postal_code": "443402"
+        }
+      },
+      "account_details": {
+        "customer_id": "156115080",
+        "account_number": "50100384216375",
+        "ifsc_code": "HDFC0002817",
+        "micr_code": "444240402",
+        "scheme": "PRIME",
+        "nominee": {
+          "registered": "Registered",
+          "name": null
+        },
+        "pan": null,
+        "ckyc_number": null
+      },
+      "contact_details": {
+        "mobile_number": "18002026161",
+        "email": "AGRAWALTEJAS01@GMAIL.COM"
+      },
+      "statement_period": {
+        "from": "01-02-2024",
+        "to": "29-02-2024"
+      }
+    },
+    "statements": []
+  },
+  "March.pdf": {
+    "pdf": "March.pdf",
+    "account": {
+      "account_holder": {
+        "name": "MR TEJAS SANJIV AGRAWAL",
+        "joint_holder": null,
+        "father_name": "SANJIV TRYAMBAKDAS AGRAWAL",
+        "address": {
+          "street": "NEAR STATE BANK MAIN ROAD",
+          "village": "JAMOD",
+          "city": "JALGAON",
+          "state": "MAHARASHTRA",
+          "country": "INDIA",
+          "postal_code": "443402"
+        }
+      },
+      "account_details": {
+        "customer_id": "156115080",
+        "account_number": "50100384216375",
+        "ifsc_code": "HDFC0002817",
+        "micr_code": "444240402",
+        "scheme": "PRIME",
+        "nominee": {
+          "registered": "Registered",
+          "name": null
+        },
+        "pan": null,
+        "ckyc_number": null
+      },
+      "contact_details": {
+        "mobile_number": "18002026161",
+        "email": "AGRAWALTEJAS01@GMAIL.COM"
+      },
+      "statement_period": {
+        "from": "01-03-2024",
+        "to": "31-03-2024"
+      }
+    },
+    "statements": [
+      {
+        "transactions": [
+          {
+            "date": "20/03/24",
+            "cheque_number": null,
+            "particulars": "UPI-MIHIR GHANSHYAM BAHE-7057592979@YBL-0000444696183237",
+            "payment_method": "UPI",
+            "debit": "1,815.00",
+            "credit": null,
+            "balance": "32,349.04",
+            "category": "Miscellaneous",
+            "subcategory": "Other",
+            "recipientName": "MIHIR GHANSHYAM BAHE"
+          },
+          {
+            "date": "21/03/24",
+            "cheque_number": null,
+            "particulars": "UPI-BUNDL TECHNOLOGIES P-SWIGGY222.RZP@A0000408116717938",
+            "payment_method": "UPI",
+            "debit": "202.00",
+            "credit": null,
+            "balance": "32,147.04",
+            "category": "Food and Groceries",
+            "subcategory": "Food delivery",
+            "recipientName": "BUNDL TECHNOLOGIES P"
+          },
+          {
+            "date": "25/03/24",
+            "cheque_number": null,
+            "particulars": "UPI-SP TOURS  TRAVELS-8605713227-2@OKBIZ0000408542385324",
+            "payment_method": "UPI",
+            "debit": "430.00",
+            "credit": null,
+            "balance": "31,717.04",
+            "category": "Transportation",
+            "subcategory": "Public transport",
+            "recipientName": "SP TOURS  TRAVELS"
+          },
+          {
+            "date": "25/03/24",
+            "cheque_number": null,
+            "particulars": "UPI-SAPTAGIRI RESTAURANT-PAYTM-69302669@0000408553175451",
+            "payment_method": "UPI",
+            "debit": "130.00",
+            "credit": null,
+            "balance": "31,587.04",
+            "category": "Food and Groceries",
+            "subcategory": "Dining out",
+            "recipientName": "SAPTAGIRI RESTAURANT"
+          },
+          {
+            "date": "25/03/24",
+            "cheque_number": null,
+            "particulars": "UPI-SAPTAGIRI RESTAURANT-PAYTM-69302669@0000408511883659",
+            "payment_method": "UPI",
+            "debit": "250.00",
+            "credit": null,
+            "balance": "31,337.04",
+            "category": "Food and Groceries",
+            "subcategory": "Dining out",
+            "recipientName": "SAPTAGIRI RESTAURANT"
+          },
+          {
+            "date": "25/03/24",
+            "cheque_number": null,
+            "particulars": "UPI-GOVINDARAJU H K-7259219131@YBL-CNRB00000445113218795",
+            "payment_method": "UPI",
+            "debit": "720.00",
+            "credit": null,
+            "balance": "30,617.04",
+            "category": "Miscellaneous",
+            "subcategory": "Other",
+            "recipientName": "GOVINDARAJU H K"
+          },
+          {
+            "date": "26/03/24",
+            "cheque_number": null,
+            "particulars": "UPI-RATHAN SINGH-8310631570@YBL-CNRB00000000445247025895",
+            "payment_method": "UPI",
+            "debit": "700.00",
+            "credit": null,
+            "balance": "29,917.04",
+            "category": "Miscellaneous",
+            "subcategory": "Other",
+            "recipientName": "RATHAN SINGH"
+          },
+          {
+            "date": "26/03/24",
+            "cheque_number": null,
+            "particulars": "UPI-COCO KORMANGALA-PAYTM-10187694@PAYTM0000408652784984",
+            "payment_method": "UPI",
+            "debit": "400.00",
+            "credit": null,
+            "balance": "29,517.04",
+            "category": "Food and Groceries",
+            "subcategory": "Dining out",
+            "recipientName": "COCO KORMANGALA"
+          },
+          {
+            "date": "26/03/24",
+            "cheque_number": null,
+            "particulars": "UPI-GREEN\nVALLEY-PAYTMQRVBM64YN5RP@PAYTM\n0000408614596521",
+            "payment_method": "UPI",
+            "debit": "166.00",
+            "credit": null,
+            "balance": "29,351.04",
+            "category": "Miscellaneous",
+            "subcategory": "Other",
+            "recipientName": "GREEN\nVALLEY"
+          },
+          {
+            "date": "26/03/24",
+            "cheque_number": null,
+            "particulars": "UPI-MOHAMMAD CHOTKAU-PAYTMQR2810050501010000408619091151",
+            "payment_method": "UPI",
+            "debit": "40.00",
+            "credit": null,
+            "balance": "29,311.04",
+            "category": "Miscellaneous",
+            "subcategory": "Other",
+            "recipientName": "MOHAMMAD CHOTKAU"
+          },
+          {
+            "date": "26/03/24",
+            "cheque_number": null,
+            "particulars": "UPI-G MART-PAYTMQRAORFPJP408@PAYTM-YESB0000040863836069",
+            "payment_method": "UPI",
+            "debit": "10.00",
+            "credit": null,
+            "balance": "29,301.04",
+            "category": "Shopping",
+            "subcategory": "Other",
+            "recipientName": "G MART"
+          },
+          {
+            "date": "27/03/24",
+            "cheque_number": null,
+            "particulars": "UPI-NA-NA-HDFC0002817-445329378327-PAYME0000445329378327",
+            "payment_method": "UPI",
+            "debit": "1,990.49",
+            "credit": null,
+            "balance": "27,310.55",
+            "category": "Miscellaneous",
+            "subcategory": "Other",
+            "recipientName": null
+          },
+          {
+            "date": "27/03/24",
+            "cheque_number": null,
+            "particulars": "UPI-MR SHAKTHIVEL K-PAYTMQR28100505010110000408791622539",
+            "payment_method": "UPI",
+            "debit": "500.00",
+            "credit": null,
+            "balance": "26,810.55",
+            "category": "Miscellaneous",
+            "subcategory": "Other",
+            "recipientName": "MR SHAKTHIVEL K"
+          },
+          {
+            "date": "28/03/24",
+            "cheque_number": null,
+            "particulars": "ACH C- BEL 2INT-DIV 2023-24-1208160061270000002274698739",
+            "payment_method": "ACH",
+            "debit": "94.50",
+            "credit": null,
+            "balance": "26,905.05",
+            "category": "Miscellaneous",
+            "subcategory": "Other",
+            "recipientName": "BEL 2INT-DIV"
+          },
+          {
+            "date": "28/03/24",
+            "cheque_number": null,
+            "particulars": "ACH C- MISHRA DHATU NIGAM L-0000000000000000007043470088",
+            "payment_method": "ACH",
+            "debit": "31.00",
+            "credit": null,
+            "balance": "26,936.05",
+            "category": "Miscellaneous",
+            "subcategory": "Other",
+            "recipientName": "MISHRA DHATU NIGAM L"
+          },
+          {
+            "date": "29/03/24",
+            "cheque_number": null,
+            "particulars": "UPI-NAMMA TRIP-NAMMATRIP.RZP@MAIRTEL-AIR0000445527350095",
+            "payment_method": "UPI",
+            "debit": "796.50",
+            "credit": null,
+            "balance": "26,139.55",
+            "category": "Transportation",
+            "subcategory": "Public transport",
+            "recipientName": "NAMMA TRIP"
+          },
+          {
+            "date": "29/03/24",
+            "cheque_number": null,
+            "particulars": "UPI-BUNDL TECHNOLOGIES P-SWIGGYGENIE@AXB0000408965154286",
+            "payment_method": "UPI",
+            "debit": "105.00",
+            "credit": null,
+            "balance": "26,034.55",
+            "category": "Food and Groceries",
+            "subcategory": "Food delivery",
+            "recipientName": "BUNDL TECHNOLOGIES P"
+          },
+          {
+            "date": "29/03/24",
+            "cheque_number": null,
+            "particulars": "UPI-SWIGGY-SWIGGYSTORES@ICICI-ICIC0DC0090000408922893069",
+            "payment_method": "UPI",
+            "debit": "60.00",
+            "credit": null,
+            "balance": "25,974.55",
+            "category": "Food and Groceries",
+            "subcategory": "Food delivery",
+            "recipientName": "SWIGGY"
+          },
+          {
+            "date": "29/03/24",
+            "cheque_number": null,
+            "particulars": "UPI-DUNZO-DUNZO.CASHFREE@HDFCBANK-HDFC000000408930033109",
+            "payment_method": "UPI",
+            "debit": "60.00",
+            "credit": null,
+            "balance": "26,034.55",
+            "category": "Miscellaneous",
+            "subcategory": "Other",
+            "recipientName": "DUNZO"
+          },
+          {
+            "date": "29/03/24",
+            "cheque_number": null,
+            "particulars": "UPI-BUNDL TECHNOLOGIES P-SWIGGYGENIE@AXB0000445561058772",
+            "payment_method": "UPI",
+            "debit": "90.00",
+            "credit": null,
+            "balance": "25,944.55",
+            "category": "Food and Groceries",
+            "subcategory": "Food delivery",
+            "recipientName": "BUNDL TECHNOLOGIES P"
+          },
+          {
+            "date": "29/03/24",
+            "cheque_number": null,
+            "particulars": "UPI-SWIGGY-SWIGGY.REFUNDS@AXISBANK-UTIB00000408973838234",
+            "payment_method": "UPI",
+            "debit": "90.00",
+            "credit": null,
+            "balance": "26,034.55",
+            "category": "Food and Groceries",
+            "subcategory": "Food delivery",
+            "recipientName": "SWIGGY"
+          },
+          {
+            "date": "29/03/24",
+            "cheque_number": null,
+            "particulars": "UPI-SWIGGYGENIE-SWIGGYGENIE@YESPAY-YESB00000445597642976",
+            "payment_method": "UPI",
+            "debit": "72.00",
+            "credit": null,
+            "balance": "25,962.55",
+            "category": "Food and Groceries",
+            "subcategory": "Food delivery",
+            "recipientName": "SWIGGYGENIE"
+          },
+          {
+            "date": "30/03/24",
+            "cheque_number": null,
+            "particulars": "ACH D- SIP-4A5L4OJ9RQQ40000002330406856",
+            "payment_method": "ACH",
+            "debit": "1,000.00",
+            "credit": null,
+            "balance": "24,962.55",
+            "category": "Savings and Investments",
+            "subcategory": "Investment contributions",
+            "recipientName": null
+          },
+          {
+            "date": "30/03/24",
+            "cheque_number": null,
+            "particulars": "ACH C- OIL INDIA LIMITED-949853300000023504174253",
+            "payment_method": "ACH",
+            "debit": "178.50",
+            "credit": null,
+            "balance": "25,141.05",
+            "category": "Miscellaneous",
+            "subcategory": "Other",
+            "recipientName": "OIL INDIA LIMITED"
+          },
+          {
+            "date": "30/03/24",
+            "cheque_number": null,
+            "particulars": "50200066327428-TPT-SALARY MARCH 2024-CRE0000000184906287",
+            "payment_method": "Other",
+            "debit": null,
+            "credit": "140,279.00",
+            "balance": "165,420.05",
+            "category": "Income",
+            "subcategory": "Salary",
+            "recipientName": "DITAIL TECHNOLOGIES PRIVATE LIMITED"
+          },
+          {
+            "date": "30/03/24",
+            "cheque_number": null,
+            "particulars": "UPI-SWIGGYINSTAMART-SWIGGYINSTAMART@YESP0000409051247505",
+            "payment_method": "UPI",
+            "debit": "143.00",
+            "credit": null,
+            "balance": "165,277.05",
+            "category": "Food and Groceries",
+            "subcategory": "Groceries",
+            "recipientName": "SWIGGYINSTAMART"
+          },
+          {
+            "date": "31/03/24",
+            "cheque_number": null,
+            "particulars": "UPI-SUSHANTI CHAKRAVARTY-SCHAKRAVARTY02-0000409147813677",
+            "payment_method": "UPI",
+            "debit": "80.00",
+            "credit": null,
+            "balance": "165,357.05",
+            "category": "Miscellaneous",
+            "subcategory": "Other",
+            "recipientName": "SUSHANTI CHAKRAVARTY"
+          },
+          {
+            "date": "31/03/24",
+            "cheque_number": null,
+            "particulars": "UPI-AXIS-CRED.CLUB@AXISB-UTIB0000114-40900004091256258323",
+            "payment_method": "UPI",
+            "debit": "33,615.00",
+            "credit": null,
+            "balance": "131,742.05",
+            "category": "Debt Repayment",
+            "subcategory": "Credit card payments",
+            "recipientName": "CRED.CLUB"
+          },
+          {
+            "date": "31/03/24",
+            "cheque_number": null,
+            "particulars": "UPI-RATAN KUMAR RAM-96864764360@YBL-BKID0000445773775724",
+            "payment_method": "UPI",
+            "debit": "4,500.00",
+            "credit": null,
+            "balance": "127,242.05",
+            "category": "Miscellaneous",
+            "subcategory": "Other",
+            "recipientName": "RATAN KUMAR RAM"
+          },
+          {
+            "date": "31/03/24",
+            "cheque_number": null,
+            "particulars": "UPI-NA-NA-HDFC0002817-445794706051-PAYME0000445794706051",
+            "payment_method": "UPI",
+            "debit": "1,939.00",
+            "credit": null,
+            "balance": "125,303.05",
+            "category": "Miscellaneous",
+            "subcategory": "Other",
+            "recipientName": null
+          },
+          {
+            "date": "31/03/24",
+            "cheque_number": null,
+            "particulars": "CREDIT INTEREST CAPITALISED",
+            "payment_method": "Other",
+            "debit": null,
+            "credit": "415.00",
+            "balance": "125,718.05",
+            "category": "Savings and Investments",
+            "subcategory": "Savings account deposits",
+            "recipientName": null
+          }
+        ]
+      }
+    ]
+  }
+}

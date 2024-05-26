@@ -108,11 +108,11 @@ General Extraction Instructions for Each Transaction:
 - Date: Extract the date in DD-MM-YYYY format.
 - Cheque Number: Extract the cheque number if applicable; if not, indicate as null.
 - Particulars: Extract any particulars related to the transaction.
-- Payment Method: Identify the payment method (UPI, CARD, Cheque, Particular, Autopayment, Other, Debt).
+- Payment Method: Identify the payment method (UPI, CARD, Cheque, Particular, Autopayment, Other, Debt). If payment method is unidentifiable, mark as 'needs to be checked'
 - Debit and Credit: Extract the debit and credit amounts; if none, leave blank.
 - Balance: Extract the balance amount after the transaction.
 - Category and Subcategory: Categorize the transaction based on the particulars, using the specified list.
-- Recipient Information: Extract the recipient’s name if mentioned.
+- Recipient Information: Extract the recipient’s name if mentioned. Mark 'needs to be checked' otherwise
 
 JSON Structure:
 {{
