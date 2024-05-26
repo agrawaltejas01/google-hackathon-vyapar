@@ -100,29 +100,5 @@ function getLoanAmount() {
   return loanAmount;
 }
 
-let randomExpense = (minK, maxK) =>
-  faker.finance.amount({
-    min: parseInt(`${minK}000`),
-    max: parseInt(`${maxK}000`),
-  });
-
-// function fakeCreditData() {
-//   result = {};
-
-//   for (let i = 0; i < 12; i++) {
-//     creditCardExpenses.push(parseInt(randomExpense(5, 10)));
-//   }
-
-//   result = {
-//     credit: creditCardExpenses,
-//     "Commercial Vehicle Loan": randomExpense(10, 30),
-//     "Consumer Loan": randomExpense(10, 30),
-//   };
-
-//   fs.writeFileSync(loansOutputPath, JSON.stringify(result));
-// }
-
-// fakeCreditData();
-
 bucketize();
 getLoanAmount();
