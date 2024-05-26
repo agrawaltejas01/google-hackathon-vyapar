@@ -64,6 +64,7 @@ function getUserData(req, res) {
           micr_code: bankData?.account.account_details?.micr_code || "",
           pan: bankData?.account?.account_details?.pan || "",
           spend: getSpendByCategory(bankData.statements),
+          loanAmount: bankAggregator.getLoanAmount(jsonData),
           statement_period: bankData?.account?.statement_period
             ? {
                 from: bankData?.account?.statement_period?.from,
@@ -74,9 +75,7 @@ function getUserData(req, res) {
         results.push(formattedResponse);
       }
     }
-    const loanAmount = bankAggregator.getLoanAmount(jsonData);
     if (results.length > 0) {
-      report = { results, loanAmount };
       res.json(results);
     } else {
       res.status(404).json({ error: "No bank data found" });
