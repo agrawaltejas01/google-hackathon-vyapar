@@ -49,60 +49,62 @@ JSON Structure:
 Follow these guidelines to ensure accurate data extraction and placement within the JSON structure. Handle missing information by indicating 'null' or leaving the field blank. Verify the extracted data for accuracy and to avoid duplication."
 `;
 
-const promptTemplateALLPage = `Given the text of a bank statement provided as {bank_statement_text} , extract transactional information according to the following instructions. Use the categories and subcategories provided to classify each transaction. Ensure accurate and detailed data extraction for each transaction to populate the JSON structure effectively.
+const promptTemplateALLPage = `Given the text of a bank statement provided as {bank_statement_text} , extract transactional information according to the following instructions. Use the categories and subcategories provided to classify each transaction. 
+Each subcategory is followed by its weight and a true/false. Add the same weight and true/false fields int the json response.
+Ensure accurate and detailed data extraction for each transaction to populate the JSON structure effectively.
 
 Categories and Subcategories:
 - Housing and Utilities
-  - Rent or mortgage
-  - Electricity bill
-  - Water bill
-  - Gas bill
-  - Internet bill
-  - Phone bill
+  - Rent or mortgage 0.05 false
+  - Electricity bill 0.02 false
+  - Water bill 0.01 false
+  - Gas bill 0.01 false
+  - Internet bill 0.01 false
+  - Phone bill 0.03 false
 - Transportation
-  - Fuel
-  - Public transport
-  - Vehicle maintenance
-  - Vehicle insurance
+  - Fuel 0.04 false
+  - Public transport 0.03 false
+  - Vehicle maintenance 0.02 false
+  - Vehicle insurance 0.01 false
 - Food and Groceries
-  - Groceries
-  - Dining out
-  - Food delivery
+  - Groceries 0.1 false
+  - Dining out 0.03 true 
+  - Food delivery 0.02 true
 - Healthcare
-  - Medical bills
-  - Pharmacy
-  - Health insurance
+  - Medical bills 0.05 false
+  - Pharmacy 0.03 false
+  - Health insurance 0.02 false
 - Debt Repayment
-  - Credit card payments
-  - Loan payments
-  - Other debt-related expenses
+  - Credit card payments 0.05 false 
+  - Loan payments 0.04 false
+  - Other debt-related expenses 0.01 false
 - Savings and Investments
-  - Savings account deposits
-  - Investment contributions
+  - Savings account deposits 0.06 false
+  - Investment contributions 0.04 false
 - Insurance
-  - Life insurance
-  - Home insurance
-  - Other insurance premiums
+  - Life insurance 0.02 false
+  - Home insurance 0.02 false
+  - Other insurance premiums 0.01 false
 - Entertainment and Leisure
-  - Subscriptions
-  - Event tickets
-  - Hobbies and sports
+  - Subscriptions 0.05
+  - Event tickets 0.03
+  - Hobbies and sports 0.01
 - Education
-  - Tuition fees
-  - School supplies
-  - Courses and workshops
+  - Tuition fees 0.03 false
+  - School supplies 0.01 false
+  - Courses and workshops 0.01 false
 - Shopping
-  - Clothing and accessories
-  - Electronics
-  - Home furnishings
+  - Clothing and accessories 0.05 true
+  - Electronics 0.03 true
+  - Home furnishings 0.02 true
 - Miscellaneous
-  - Gifts and donations
-  - Pet expenses
-  - Legal fees
+  - Gifts and donations 0.03 true
+  - Pet expenses 0.01 true
+  - Legal fees 0.01 true
 - Income
-  - Salary
-  - Business income
-  - Other income sources
+  - Salary 0.03 false
+  - Business income 0.01 false
+  - Other income sources 0.01 false
 
 General Extraction Instructions for Each Transaction:
 - Date: Extract the date in DD-MM-YYYY format.
@@ -112,6 +114,7 @@ General Extraction Instructions for Each Transaction:
 - Debit and Credit: Extract the debit and credit amounts; if none, leave blank.
 - Balance: Extract the balance amount after the transaction.
 - Category and Subcategory: Categorize the transaction based on the particulars, using the specified list.
+- Weight and isDiscretionary: You will get this from the categorising. This is provided in the categories and subcategories map.
 - Recipient Information: Extract the recipient’s name if mentioned. Mark 'needs to be checked' otherwise
 
 JSON Structure:
@@ -127,6 +130,8 @@ JSON Structure:
       "balance": "<Balance>",
       "category": "<Category>",
       "subcategory": "<Subcategory>",
+      "weight": "<Weight>",
+      "isDiscretionary": "<isDiscretionary>",
       "recipientName":  "<Recipient Name>"
     }}
   ]
