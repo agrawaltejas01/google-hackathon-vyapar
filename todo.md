@@ -1,0 +1,10 @@
+- Make End points to pass JSON
+- All JSON File name and output
+- All data inside of IT
+- Filter Data of each file
+- Filter data of all file
+- Download all message
+- Chunks message
+- Pass chunks to LLM generate infomation
+- Map those message with Statements
+- Chat LLM
