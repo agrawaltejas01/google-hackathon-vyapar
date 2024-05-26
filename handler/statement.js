@@ -64,7 +64,7 @@ function getUserData(req, res) {
           micr_code: bankData?.account.account_details?.micr_code || "",
           pan: bankData?.account?.account_details?.pan || "",
           spend: getSpendByCategory(bankData.statements),
-          loanAmount: bankAggregator.getLoanAmount(jsonData).loanAmounte,
+          loanAmount: bankAggregator.getLoanAmount(jsonData).loanAmount,
           statement_period: bankData?.account?.statement_period
             ? {
                 from: bankData?.account?.statement_period?.from,
