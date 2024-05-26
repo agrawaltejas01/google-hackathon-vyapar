@@ -1,1 +1,21 @@
-{"categoryToExpenseAmountMap":{"05-Miscellaneous":933118,"05-Food and Groceries":5162,"05-Shopping":13542,"05-Transportation":938,"05-Housing and Utilities":1034,"05-Healthcare":10,"11-Housing and Utilities":598,"11-Shopping":2978,"11-Debt Repayment":235398,"11-Miscellaneous":41190,"11-Insurance":6090,"12-Miscellaneous":294048,"12-Shopping":5360,"12-Transportation":6330,"01-Miscellaneous":217848,"01-Transportation":500,"01-Food and Groceries":5436,"01-Housing and Utilities":824,"01-Shopping":82064,"01-Debt Repayment":50000,"02-Miscellaneous":454414,"02-Shopping":58258,"02-Food and Groceries":8560,"02-Transportation":23906,"02-Education":6812,"02-Debt Repayment":95962,"02-Housing and Utilities":4900,"03-Miscellaneous":147636,"03-Housing and Utilities":28320,"03-Education":2942,"03-Entertainment and Leisure":2044,"03-Food and Groceries":3660,"03-Shopping":18134,"03-Debt Repayment":3234,"04-Miscellaneous":209614,"04-Healthcare":2762,"04-Education":43634,"04-Food and Groceries":1644,"04-Transportation":10208,"04-Shopping":20328,"04-Debt Repayment":15000,"04-Housing and Utilities":1276,"05-Debt Repayment":304988,"05-Education":7344,"05-Entertainment and Leisure":9712},"monthToExpenseMap":{"11":286254,"12":305738,"05":1275848,"01":356672,"02":652812,"03":205970,"04":304466},"monthToCreditMap":{"11":304352,"12":400108,"05":1056160,"01":317798,"02":837006,"03":49236,"04":304544},"monthToCreditCardMap":{"12":73994,"05":2356,"02":75254,"04":1894}}
+{
+  "categoryToExpenseAmountMap": {
+    "04-Miscellaneous": 65331,
+    "04-Food and Groceries": 1305,
+    "04-Savings and Investments": 77000,
+    "04-Debt Repayment": 6000,
+    "04-Entertainment and Leisure": 2042,
+    "04-Shopping": 2894,
+    "04-Education": 398,
+    "04-Transportation": 41,
+    "03-Miscellaneous": 12284,
+    "03-Food and Groceries": 1768,
+    "03-Transportation": 1226,
+    "03-Shopping": 10,
+    "03-Debt Repayment": 303,
+    "03-Savings and Investments": 1000
+  },
+  "monthToExpenseMap": { "04": 155011, "03": 16591 },
+  "monthToCreditMap": { "04": 181823, "03": 140694 },
+  "monthToCreditCardMap": { "04": 92384, "03": 33615 }
+}

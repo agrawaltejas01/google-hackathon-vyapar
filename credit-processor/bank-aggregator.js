@@ -6,7 +6,7 @@ let monthToExpenseMap = {};
 let monthToCreditMap = {};
 let creditCardExpenses = [];
 let monthToCreditCardMap = {};
-const outputPath = `output/tejas/final/bank-aggregation.json`;
+let weightedDiscretionaryExpenses = {};
 
 function handleEmptyEntry(map, key, value) {
   if (!map[key]) map[key] = value;
@@ -29,13 +29,16 @@ function bucketize(inputJson) {
         let month = date.split("-")[1];
 
         transaction.debit =
-          transaction.debit && typeof transaction.debit === "string"
-            ? transaction.debit.replace(/,/g, "")
-            : transaction.debit;
+          transaction.debit &&
+          typeof transaction.debit == "string" &&
+          transaction.debit.replace(/,/g, "");
         transaction.credit =
-          transaction.credit && typeof transaction.credit === "string"
-            ? transaction.credit.replace(/,/g, "")
-            : transaction.credit;
+          transaction.credit &&
+          typeof transaction.credit == "string" &&
+          transaction.credit.replace(/,/g, "");
+
+        let weight = parseFloat(transaction.weight);
+        let isDiscretionary = transaction.isDiscretionary == "true";
 
         transaction.debit = parseInt(transaction.debit || 0);
         transaction.credit = parseInt(transaction.credit || 0);
@@ -51,6 +54,14 @@ function bucketize(inputJson) {
               transaction.debit
             );
             handleEmptyEntry(monthToExpenseMap, month, transaction.debit);
+
+            if (isDiscretionary) {
+              handleEmptyEntry(
+                weightedDiscretionaryExpenses,
+                month,
+                transaction.debit * weight
+              );
+            }
           }
         } else {
           handleEmptyEntry(monthToCreditMap, month, transaction.credit);
@@ -66,24 +77,49 @@ function bucketize(inputJson) {
     monthToCreditCardMap
   };
 
-  fs.writeFileSync(outputPath, JSON.stringify(result));
+  // fs.writeFileSync(outputPath, JSON.stringify(result));
+}
+
+function dtiAndDssRatios(avgIncome, avgExpense, avgCreditExpense, avgDss) {
+  // let dss = avgExpense / avgIncome;
+  dss = avgDss;
+  let dti = avgCreditExpense / avgIncome;
+
+  dti = Math.max(0, 100 - 2.5 * dti);
+
+  let creditScore = 0.35 * dti + 0.65 * dss;
+
+  let adjustmentRatio = 1.0;
+
+  if (dss > 1) adjustmentRatio = 1.5;
+
+  let loanAmount = (avgIncome * (dti * adjustmentRatio)) / 12;
+
+  console.log(loanAmount, creditScore);
+
+  return { loanAmount, avgDss };
+}
+
+function normal(avgIncome, avgExpense, avgCreditExpense) {
+  let loanAmount = (avgIncome - (avgExpense + avgCreditExpense)) * 10;
+  console.log(loanAmount);
+
+  return loanAmount;
 }
 
 function getLoanAmount(inputJson) {
-  console.log("inputJson", inputJson);
   bucketize(inputJson);
-  // const inputPath = `../output/${inputPerson}/final/results.json`;
-  // const outputPath = `output/${inputPerson}/final/bank-aggregation.json`;
-  // const loansOutputPath = `output/${inputPerson}/final/loans.json`;
-
-  // const inputJson = require(inputPath);
   let avgIncome = 0;
   let avgExpense = 0;
   let avgCreditExpense = 0;
+  let avgDss = 0;
 
   let monthToCreditMapArr = Object.keys(monthToCreditMap);
   let monthToExpenseMapArr = Object.keys(monthToExpenseMap);
   let monthToCreditCardMapArr = Object.keys(monthToCreditCardMap);
+  let weightedDiscretionaryExpensesArr = Object.keys(
+    weightedDiscretionaryExpenses
+  );
 
   for (key of monthToCreditMapArr) {
     avgIncome += monthToCreditMap[key];
@@ -100,36 +136,16 @@ function getLoanAmount(inputJson) {
   }
   avgCreditExpense = avgCreditExpense / monthToCreditCardMapArr.length;
 
-  let loanAmount = (avgIncome - (avgExpense + avgCreditExpense)) * 10;
-  console.log(loanAmount);
-  return loanAmount;
+  for (key of weightedDiscretionaryExpensesArr) {
+    avgDss += weightedDiscretionaryExpenses[key];
+  }
+
+  return dtiAndDssRatios(avgIncome, avgExpense, avgCreditExpense, avgDss);
+  // return normal(avgIncome, avgExpense, avgCreditExpense);
+
+  // let loanAmount = (avgIncome - (avgExpense + avgCreditExpense)) * 10;
+  // console.log(loanAmount);
+  // return loanAmount;
 }
-
-// let randomExpense = (minK, maxK) =>
-//   faker.finance.amount({
-//     min: parseInt(`${minK}000`),
-//     max: parseInt(`${maxK}000`)
-//   });
-
-// function fakeCreditData() {
-//   result = {};
-
-//   for (let i = 0; i < 12; i++) {
-//     creditCardExpenses.push(parseInt(randomExpense(5, 10)));
-//   }
-
-//   result = {
-//     credit: creditCardExpenses,
-//     "Commercial Vehicle Loan": randomExpense(10, 30),
-//     "Consumer Loan": randomExpense(10, 30),
-//   };
-
-//   fs.writeFileSync(loansOutputPath, JSON.stringify(result));
-// }
-
-// fakeCreditData();
-
-// bucketize();
-// getLoanAmount();
 
 module.exports = { getLoanAmount };
