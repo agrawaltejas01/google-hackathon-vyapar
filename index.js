@@ -7,7 +7,7 @@ const { HarmBlockThreshold, HarmCategory } = require("@google/generative-ai");
 const { PromptTemplate } = require("@langchain/core/prompts");
 require("dotenv").config();
 
-const outputDirName = "sumit";
+const outputDirName = "tejas";
 const baseDir = __dirname; // Assuming __dirname is the base directory for paths
 const rawDataDir = path.join(baseDir, "output", outputDirName, "raw");
 const finalOutputDir = path.join(baseDir, "output", outputDirName, "final");
@@ -18,24 +18,24 @@ if (!fs.existsSync(finalOutputDir)) {
 }
 
 // Example call to the function
-// processPDFs(__dirname, outputDirName);
+
 const safetySettings = [
   {
     category: HarmCategory.HARM_CATEGORY_HARASSMENT,
-    threshold: HarmBlockThreshold.BLOCK_NONE
+    threshold: HarmBlockThreshold.BLOCK_NONE,
   },
   {
     category: HarmCategory.HARM_CATEGORY_HATE_SPEECH,
-    threshold: HarmBlockThreshold.BLOCK_NONE
+    threshold: HarmBlockThreshold.BLOCK_NONE,
   },
   {
     category: HarmCategory.HARM_CATEGORY_SEXUALLY_EXPLICIT,
-    threshold: HarmBlockThreshold.BLOCK_NONE
+    threshold: HarmBlockThreshold.BLOCK_NONE,
   },
   {
     category: HarmCategory.HARM_CATEGORY_DANGEROUS_CONTENT,
-    threshold: HarmBlockThreshold.BLOCK_NONE
-  }
+    threshold: HarmBlockThreshold.BLOCK_NONE,
+  },
 ];
 
 const accountDataPrompt = PromptTemplate.fromTemplate(
@@ -49,7 +49,7 @@ const model = new ChatGoogleGenerativeAI({
   model: "gemini-1.5-flash",
   apiKey: process.env.GEMINI_KEY,
   safetySettings: safetySettings,
-  maxOutputTokens: 8192
+  maxOutputTokens: 8192,
 });
 
 async function handlePDFStatements() {
@@ -65,7 +65,7 @@ async function handlePDFStatements() {
       results[pdf.name] = {
         pdf: pdf.name,
         account: {},
-        statements: []
+        statements: [],
       };
     }
 
@@ -136,7 +136,7 @@ function splitPageText(pageText) {
 
 async function handleDetails(pageText, promptTemplate) {
   const formattedPrompt = await promptTemplate.format({
-    bank_statement_text: pageText
+    bank_statement_text: pageText,
   });
   const chatResponse = await model.invoke([["human", formattedPrompt]]);
 
@@ -154,3 +154,5 @@ async function handleDetails(pageText, promptTemplate) {
 handlePDFStatements().catch((error) =>
   console.error("Error during PDF Statement handling:", error)
 );
+
+// processPDFs(__dirname, outputDirName);
