@@ -29,9 +29,13 @@ function bucketize(inputJson) {
         let month = date.split("-")[1];
 
         transaction.debit =
-          transaction.debit && transaction.debit.replace(/,/g, "");
+          transaction.debit && typeof transaction.debit === "string"
+            ? transaction.debit.replace(/,/g, "")
+            : transaction.debit;
         transaction.credit =
-          transaction.credit && transaction.credit.replace(/,/g, "");
+          transaction.credit && typeof transaction.credit === "string"
+            ? transaction.credit.replace(/,/g, "")
+            : transaction.credit;
 
         transaction.debit = parseInt(transaction.debit || 0);
         transaction.credit = parseInt(transaction.credit || 0);

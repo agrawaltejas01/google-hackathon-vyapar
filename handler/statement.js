@@ -56,7 +56,7 @@ function getUserData(req, res) {
       console.log("bankData", bankData);
       if (bankData) {
         const formattedResponse = {
-          bank: capitalizeFirstLetter(bank),
+          bank: bankData?.account?.account_details?.bank_name || "",
           name: bankData?.account?.account_holder?.name || "",
           account_number:
             bankData?.account?.account_details?.account_number || "",
@@ -96,7 +96,8 @@ function getSpendByCategory(statements) {
 
     statement.transactions.forEach((transaction) => {
       const { category, subcategory, debit } = transaction;
-      if (!debit) return; // Skip transactions without debit amount
+
+      if (!debit || typeof debit !== "string") return;
 
       const amount = parseFloat(debit.replace(/,/g, ""));
       if (isNaN(amount)) return; // Skip if amount is not a number
