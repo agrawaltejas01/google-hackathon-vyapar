@@ -1,113 +1,112 @@
 const fs = require("fs");
 // const faker = require("@faker-js/faker").faker;
 
-let monthAndCategoryToExpenseAmountMap = {};
-let monthToExpenseMap = {};
-let monthToCreditMap = {};
-let creditCardExpenses = [];
-let monthToCreditCardMap = {};
-let weightedDiscretionaryExpenses = {};
+function getLoanAmount(inputJson) {
+  let monthAndCategoryToExpenseAmountMap = {};
+  let monthToExpenseMap = {};
+  let monthToCreditMap = {};
+  let creditCardExpenses = [];
+  let monthToCreditCardMap = {};
+  let weightedDiscretionaryExpenses = {};
 
-function handleEmptyEntry(map, key, value) {
-  if (!map[key]) map[key] = value;
-  else map[key] += value;
-}
+  function handleEmptyEntry(map, key, value) {
+    if (!map[key]) map[key] = value;
+    else map[key] += value;
+  }
 
-function bucketize(inputJson) {
-  for (let bankStatements of Object.keys(inputJson)) {
-    let statements = inputJson[bankStatements]["statements"];
-    if (!statements || !statements.length) continue;
-    for (let statement of statements) {
-      let transactions = statement["transactions"];
-      if (!transactions || !transactions.length) continue;
+  function bucketize(inputJson) {
+    for (let bankStatements of Object.keys(inputJson)) {
+      let statements = inputJson[bankStatements]["statements"];
+      if (!statements || !statements.length) continue;
+      for (let statement of statements) {
+        let transactions = statement["transactions"];
+        if (!transactions || !transactions.length) continue;
 
-      for (let transaction of transactions) {
-        let category = transaction.category;
-        let date = transaction.date;
+        for (let transaction of transactions) {
+          let category = transaction.category;
+          let date = transaction.date;
 
-        date = date.replace(/\//g, "-");
-        let month = date.split("-")[1];
+          date = date.replace(/\//g, "-");
+          let month = date.split("-")[1];
 
-        transaction.debit =
-          transaction.debit &&
-          typeof transaction.debit == "string" &&
-          transaction.debit.replace(/,/g, "");
-        transaction.credit =
-          transaction.credit &&
-          typeof transaction.credit == "string" &&
-          transaction.credit.replace(/,/g, "");
+          transaction.debit =
+            transaction.debit &&
+            typeof transaction.debit == "string" &&
+            transaction.debit.replace(/,/g, "");
+          transaction.credit =
+            transaction.credit &&
+            typeof transaction.credit == "string" &&
+            transaction.credit.replace(/,/g, "");
 
-        let weight = parseFloat(transaction.weight);
-        let isDiscretionary = transaction.isDiscretionary == "true";
+          let weight = parseFloat(transaction.weight);
+          let isDiscretionary = transaction.isDiscretionary == "true";
 
-        transaction.debit = parseInt(transaction.debit || 0);
-        transaction.credit = parseInt(transaction.credit || 0);
+          transaction.debit = parseInt(transaction.debit || 0);
+          transaction.credit = parseInt(transaction.credit || 0);
 
-        if (transaction.debit) {
-          if (transaction.subcategory == "Credit card payments") {
-            handleEmptyEntry(monthToCreditCardMap, month, transaction.debit);
-          } else {
-            let key = `${month}-${category}`;
-            handleEmptyEntry(
-              monthAndCategoryToExpenseAmountMap,
-              key,
-              transaction.debit
-            );
-            handleEmptyEntry(monthToExpenseMap, month, transaction.debit);
-
-            if (isDiscretionary) {
+          if (transaction.debit) {
+            if (transaction.subcategory == "Credit card payments") {
+              handleEmptyEntry(monthToCreditCardMap, month, transaction.debit);
+            } else {
+              let key = `${month}-${category}`;
               handleEmptyEntry(
-                weightedDiscretionaryExpenses,
-                month,
-                transaction.debit * weight
+                monthAndCategoryToExpenseAmountMap,
+                key,
+                transaction.debit
               );
+              handleEmptyEntry(monthToExpenseMap, month, transaction.debit);
+
+              if (isDiscretionary) {
+                handleEmptyEntry(
+                  weightedDiscretionaryExpenses,
+                  month,
+                  transaction.debit * weight
+                );
+              }
             }
+          } else {
+            handleEmptyEntry(monthToCreditMap, month, transaction.credit);
           }
-        } else {
-          handleEmptyEntry(monthToCreditMap, month, transaction.credit);
         }
       }
     }
+
+    let result = {
+      categoryToExpenseAmountMap: monthAndCategoryToExpenseAmountMap,
+      monthToExpenseMap,
+      monthToCreditMap,
+      monthToCreditCardMap
+    };
+
+    // fs.writeFileSync(outputPath, JSON.stringify(result));
   }
 
-  let result = {
-    categoryToExpenseAmountMap: monthAndCategoryToExpenseAmountMap,
-    monthToExpenseMap,
-    monthToCreditMap,
-    monthToCreditCardMap
-  };
+  function dtiAndDssRatios(avgIncome, avgExpense, avgCreditExpense, avgDss) {
+    // let dss = avgExpense / avgIncome;
+    dss = avgDss;
+    let dti = avgCreditExpense / avgIncome;
 
-  // fs.writeFileSync(outputPath, JSON.stringify(result));
-}
+    dti = Math.max(0, 100 - 2.5 * dti);
 
-function dtiAndDssRatios(avgIncome, avgExpense, avgCreditExpense, avgDss) {
-  // let dss = avgExpense / avgIncome;
-  dss = avgDss;
-  let dti = avgCreditExpense / avgIncome;
+    let creditScore = 0.35 * dti + 0.65 * dss;
 
-  dti = Math.max(0, 100 - 2.5 * dti);
+    let adjustmentRatio = 1.0;
 
-  let creditScore = 0.35 * dti + 0.65 * dss;
+    if (dss > 1) adjustmentRatio = 1.5;
 
-  let adjustmentRatio = 1.0;
+    let loanAmount = (avgIncome * (dti * adjustmentRatio)) / 12;
 
-  if (dss > 1) adjustmentRatio = 1.5;
+    console.log(loanAmount, creditScore);
 
-  let loanAmount = (avgIncome * (dti * adjustmentRatio)) / 12;
+    return { loanAmount, avgDss };
+  }
 
-  console.log(loanAmount, creditScore);
+  function normal(avgIncome, avgExpense, avgCreditExpense) {
+    let loanAmount = (avgIncome - (avgExpense + avgCreditExpense)) * 10;
+    console.log(loanAmount);
 
-  return { loanAmount, avgDss };
-}
-
-function normal(avgIncome, avgExpense, avgCreditExpense) {
-  let loanAmount = (avgIncome - (avgExpense + avgCreditExpense)) * 10;
-  console.log(loanAmount);
-
-  return loanAmount;
-}
-
-function getLoanAmount(inputJson) {
+    return loanAmount;
+  }
   bucketize(inputJson);
   let avgIncome = 0;
   let avgExpense = 0;
