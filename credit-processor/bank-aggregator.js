@@ -35,9 +35,13 @@ function bucketize() {
         let month = date.split("-")[1];
 
         transaction.debit =
-          transaction.debit && transaction.debit.replace(/,/g, "");
+          transaction.debit &&
+          typeof transaction.debit == "string" &&
+          transaction.debit.replace(/,/g, "");
         transaction.credit =
-          transaction.credit && transaction.credit.replace(/,/g, "");
+          transaction.credit &&
+          typeof transaction.credit == "string" &&
+          transaction.credit.replace(/,/g, "");
 
         transaction.debit = parseInt(transaction.debit || 0);
         transaction.credit = parseInt(transaction.credit || 0);
@@ -71,6 +75,32 @@ function bucketize() {
   fs.writeFileSync(outputPath, JSON.stringify(result));
 }
 
+function dtiAndDssRatios(avgIncome, avgExpense, avgCreditExpense) {
+  let dss = avgExpense / avgIncome;
+  let dti = avgCreditExpense / avgIncome;
+
+  dti = Math.max(0, 100 - 2.5 * dti);
+
+  let creditScore = 0.35 * dti + 0.65 * dss;
+
+  let adjustmentRatio = 1.0;
+
+  if (dss > 1) adjustmentRatio = 1.5;
+
+  let loanAmount = (avgIncome * (dti * adjustmentRatio)) / 12;
+
+  console.log(loanAmount, creditScore);
+
+  return loanAmount;
+}
+
+function normal(avgIncome, avgExpense, avgCreditExpense) {
+  let loanAmount = (avgIncome - (avgExpense + avgCreditExpense)) * 10;
+  console.log(loanAmount);
+
+  return loanAmount;
+}
+
 function getLoanAmount() {
   let avgIncome = 0;
   let avgExpense = 0;
@@ -95,9 +125,12 @@ function getLoanAmount() {
   }
   avgCreditExpense = avgCreditExpense / monthToCreditCardMapArr.length;
 
-  let loanAmount = (avgIncome - (avgExpense + avgCreditExpense)) * 10;
-  console.log(loanAmount);
-  return loanAmount;
+  return dtiAndDssRatios(avgIncome, avgExpense, avgCreditExpense);
+  // return normal(avgIncome, avgExpense, avgCreditExpense);
+
+  // let loanAmount = (avgIncome - (avgExpense + avgCreditExpense)) * 10;
+  // console.log(loanAmount);
+  // return loanAmount;
 }
 
 bucketize();
