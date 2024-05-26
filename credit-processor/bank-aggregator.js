@@ -1,25 +1,19 @@
 const fs = require("fs");
-const faker = require("@faker-js/faker").faker;
-const inputPerson = "tejas";
-
-const inputPath = `../output/${inputPerson}/final/results.json`;
-const outputPath = `output/${inputPerson}/final/bank-aggregation.json`;
-const loansOutputPath = `output/${inputPerson}/final/loans.json`;
-
-const inputJson = require(inputPath);
+// const faker = require("@faker-js/faker").faker;
 
 let monthAndCategoryToExpenseAmountMap = {};
 let monthToExpenseMap = {};
 let monthToCreditMap = {};
 let creditCardExpenses = [];
 let monthToCreditCardMap = {};
+const outputPath = `output/sumit/final/bank-aggregation.json`;
 
 function handleEmptyEntry(map, key, value) {
   if (!map[key]) map[key] = value;
   else map[key] += value;
 }
 
-function bucketize() {
+function bucketize(inputJson) {
   for (let bankStatements of Object.keys(inputJson)) {
     let statements = inputJson[bankStatements]["statements"];
     if (!statements || !statements.length) continue;
@@ -65,13 +59,20 @@ function bucketize() {
     categoryToExpenseAmountMap: monthAndCategoryToExpenseAmountMap,
     monthToExpenseMap,
     monthToCreditMap,
-    monthToCreditCardMap,
+    monthToCreditCardMap
   };
 
   fs.writeFileSync(outputPath, JSON.stringify(result));
 }
 
-function getLoanAmount() {
+function getLoanAmount(inputJson) {
+  console.log("inputJson", inputJson);
+  bucketize(inputJson);
+  // const inputPath = `../output/${inputPerson}/final/results.json`;
+  // const outputPath = `output/${inputPerson}/final/bank-aggregation.json`;
+  // const loansOutputPath = `output/${inputPerson}/final/loans.json`;
+
+  // const inputJson = require(inputPath);
   let avgIncome = 0;
   let avgExpense = 0;
   let avgCreditExpense = 0;
@@ -100,11 +101,11 @@ function getLoanAmount() {
   return loanAmount;
 }
 
-let randomExpense = (minK, maxK) =>
-  faker.finance.amount({
-    min: parseInt(`${minK}000`),
-    max: parseInt(`${maxK}000`),
-  });
+// let randomExpense = (minK, maxK) =>
+//   faker.finance.amount({
+//     min: parseInt(`${minK}000`),
+//     max: parseInt(`${maxK}000`)
+//   });
 
 // function fakeCreditData() {
 //   result = {};
@@ -124,5 +125,7 @@ let randomExpense = (minK, maxK) =>
 
 // fakeCreditData();
 
-bucketize();
-getLoanAmount();
+// bucketize();
+// getLoanAmount();
+
+module.exports = { getLoanAmount };

@@ -15,7 +15,7 @@ app.get("/", (req, res) => {
 
 // Define another route, for example, a GET method to retrieve data
 app.get("/users", handler.getUserNames);
-app.get("/users/account/:username", handler.getUserData);
+app.get("/users/:username", handler.getUserData);
 
 // Set the server to listen on a port
 const PORT = process.env.PORT || 3000;

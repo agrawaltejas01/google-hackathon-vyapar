@@ -1,5 +1,6 @@
 const fs = require("fs");
 const path = require("path");
+const bankAggregator = require("./../credit-processor/bank-aggregator");
 
 function getUserNames(req, res) {
   const outputFolderPath = path.join(__dirname, "..", "output"); // Adjust the path to go up one directory level
@@ -44,6 +45,8 @@ function getUserData(req, res) {
       return;
     }
 
+    let report;
+
     // Process all banks in the JSON file
     const results = [];
     for (const bank in jsonData) {
@@ -70,8 +73,10 @@ function getUserData(req, res) {
         results.push(formattedResponse);
       }
     }
-
+    const loanAmount = bankAggregator.getLoanAmount(jsonData);
+    console.log("loanAmount", loanAmount);
     if (results.length > 0) {
+      report = { results, loanAmount };
       res.json(results);
     } else {
       res.status(404).json({ error: "No bank data found" });

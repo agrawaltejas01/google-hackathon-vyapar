@@ -1,1 +1,20 @@
-{"categoryToExpenseAmountMap":{"04-Miscellaneous":71256,"04-Food and Groceries":1305,"04-Savings and Investments":77000,"04-Debt Repayment":6000,"04-Entertainment and Leisure":2042,"04-Shopping":2894,"04-Education":398,"04-Transportation":41,"03-Miscellaneous":12813,"03-Food and Groceries":1542,"03-Transportation":1226,"03-Shopping":10,"03-Savings and Investments":1000},"monthToExpenseMap":{"04":160936,"03":16591},"monthToCreditMap":{"04":181823,"03":140694},"monthToCreditCardMap":{"04":86459,"03":33615}}
+{
+  "categoryToExpenseAmountMap": {
+    "04-Miscellaneous": 71256,
+    "04-Food and Groceries": 1305,
+    "04-Savings and Investments": 77000,
+    "04-Debt Repayment": 6000,
+    "04-Entertainment and Leisure": 2042,
+    "04-Shopping": 2894,
+    "04-Education": 398,
+    "04-Transportation": 41,
+    "03-Miscellaneous": 12813,
+    "03-Food and Groceries": 1542,
+    "03-Transportation": 1226,
+    "03-Shopping": 10,
+    "03-Savings and Investments": 1000
+  },
+  "monthToExpenseMap": { "04": 160936, "03": 16591 },
+  "monthToCreditMap": { "04": 181823, "03": 140694 },
+  "monthToCreditCardMap": { "04": 86459, "03": 33615 }
+}
