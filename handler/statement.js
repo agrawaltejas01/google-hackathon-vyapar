@@ -63,6 +63,7 @@ function getUserData(req, res) {
           ifsc_code: bankData?.account.account_details?.ifsc_code || "",
           micr_code: bankData?.account.account_details?.micr_code || "",
           pan: bankData?.account?.account_details?.pan || "",
+          spend: getSpendByCategory(bankData.statements),
           statement_period: bankData?.account?.statement_period
             ? {
                 from: bankData?.account?.statement_period?.from,
@@ -74,7 +75,6 @@ function getUserData(req, res) {
       }
     }
     const loanAmount = bankAggregator.getLoanAmount(jsonData);
-    console.log("loanAmount", loanAmount);
     if (results.length > 0) {
       report = { results, loanAmount };
       res.json(results);
@@ -82,6 +82,39 @@ function getUserData(req, res) {
       res.status(404).json({ error: "No bank data found" });
     }
   });
+}
+
+function getSpendByCategory(statements) {
+  if (!statements) {
+    console.error("No statements provided");
+    return {};
+  }
+
+  const categorySpend = {};
+
+  statements.forEach((statement) => {
+    if (!statement.transactions) return;
+
+    statement.transactions.forEach((transaction) => {
+      const { category, subcategory, debit } = transaction;
+      if (!debit) return; // Skip transactions without debit amount
+
+      const amount = parseFloat(debit.replace(/,/g, ""));
+      if (isNaN(amount)) return; // Skip if amount is not a number
+
+      if (!categorySpend[category]) {
+        categorySpend[category] = { total: 0, subcategories: {} };
+      }
+      categorySpend[category].total += amount;
+
+      if (!categorySpend[category].subcategories[subcategory]) {
+        categorySpend[category].subcategories[subcategory] = 0;
+      }
+      categorySpend[category].subcategories[subcategory] += amount;
+    });
+  });
+
+  return categorySpend;
 }
 
 function capitalizeFirstLetter(string) {

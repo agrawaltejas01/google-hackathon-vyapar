@@ -33,6 +33,8 @@ JSON Structure:
       "registered": "<Nominee Registration Status>",
       "name": "<Nominee's Name>"
     }},
+    branch_name:<Branch Name>,
+    bank_name:<Bank Name>
     "pan": "<PAN Number>",
     "ckyc_number": "<CKYC Number>"
   }},

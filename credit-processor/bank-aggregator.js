@@ -6,7 +6,7 @@ let monthToExpenseMap = {};
 let monthToCreditMap = {};
 let creditCardExpenses = [];
 let monthToCreditCardMap = {};
-const outputPath = `output/sumit/final/bank-aggregation.json`;
+const outputPath = `output/tejas/final/bank-aggregation.json`;
 
 function handleEmptyEntry(map, key, value) {
   if (!map[key]) map[key] = value;
